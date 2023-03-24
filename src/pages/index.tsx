@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import Button from '@/components/Button'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +14,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <main className="flex items-center justify-center h-screen flex-col">
+        <h2 className={`text-4xl sm:text-6xl md:text-9xl text-center text-gray-800`}>LIGHT MODE</h2>
+        <h2 className={`text-4xl sm:text-6xl md:text-9xl text-center text-white `}>DARK MODE</h2>
+
+        <Button/>
+      </main>
     </>
   )
 }
